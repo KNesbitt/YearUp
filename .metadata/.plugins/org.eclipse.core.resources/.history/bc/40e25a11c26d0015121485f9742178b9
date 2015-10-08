@@ -1,0 +1,9 @@
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		Person Student = new Person ("Kinsler Nesbitt", 19, "678-555-1606", "904 Montauk Pt");
+	}
+
+}
