@@ -9,7 +9,7 @@ public class DayOfWeek
 		System.out.println("Enter the day of the week:");
 		Scanner sc = new Scanner(System.in);
 		String dayOfWeek = sc.nextLine();
-		EvaluateDayOfWeek(dayOfWeek);
+		EvaluateDayOfWeek(dayOfWeek); 
 	}
 	
 	public static void EvaluateDayOfWeek (String dayOfWeek)
@@ -46,5 +46,5 @@ public class DayOfWeek
 			{
 				System.out.println("You have given me a null sting!!");
 			}
-	}
+	} 
 }
