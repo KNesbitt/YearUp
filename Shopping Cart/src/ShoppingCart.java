@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner; 
-public class ShoppingCart {
+public class ShoppingCart 
+{
 
 	public static void main(String[] args) 
 	{
