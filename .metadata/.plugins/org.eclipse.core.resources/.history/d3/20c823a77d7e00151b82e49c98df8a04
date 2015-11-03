@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.Scanner; 
+public class ShoppingCart 
+{
+
+	public static void main(String[] args) 
+	{
+		introduction();
+		shoppingCartWork();
+        ArrayList <Item> shoppingCartItems = new ArrayList<Item>();
+        Item Item1 = new Item();  
+        
+	}
+	
+	public static void introduction()
+	{
+		System.out.println("************************");
+		System.out.println();
+		System.out.println("*    Shopping Cart     *");
+		System.out.println();
+		System.out.println("************************");
+	}
+	
+	public static void shoppingCartWork()
+	{
+		System.out.println("Do you want to input items? Type y/n");
+		Scanner sc = new Scanner(System.in);
+		String reply = sc.nextLine();
+		
+
+		
+	}
+	
+}

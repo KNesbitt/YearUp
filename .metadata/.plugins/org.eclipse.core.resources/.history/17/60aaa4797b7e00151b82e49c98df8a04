@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.Scanner; 
+public class ShoppingCart 
+{
+
+	public static void main(String[] args) 
+	{
+		System.out.println("************************");
+		System.out.println();
+		System.out.println("*    Shopping Cart     *");
+		System.out.println();
+		System.out.println("************************");
+
+		
+
+
+		Scanner sc = new Scanner(System.in);
+        ArrayList <Item> shoppingCartItems = new ArrayList<Item>();
+        Item Item1 = new Item();  
+        
+	}
+	
+	
+}
