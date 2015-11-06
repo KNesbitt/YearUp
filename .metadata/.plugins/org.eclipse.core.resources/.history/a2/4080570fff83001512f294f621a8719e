@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import java.util.Scanner; 
+public class ShoppingCart 
+{
+	public  ArrayList <Item> shoppingCart = new ArrayList<Item>();
+	
+	public static void main(String[] args) 
+	{
+		introduction();
+		ShoppingCart cart = new ShoppingCart();
+		cart.shoppingCartWork();
+	}
+	
+	public static void introduction()
+	{
+		// This method prints introduction message
+		System.out.println("********************************");
+		System.out.println();
+		System.out.println("*        Shopping Cart         *");
+		System.out.println();
+		System.out.println("********************************");
+		
+	}
+	
+	public void shoppingCartWork()
+	{
+		System.out.println("Do you want to input items? Type y/n");
+		Scanner sc = new Scanner(System.in);
+		String reply = sc.nextLine();
+		
+		if (reply.equalsIgnoreCase("y"))
+		{
+			
+		}
+		else
+		{
+			System.out.println("Goodbye!");
+		}		
+	}
+	
+	public void ScanItems(String name, double price, int quantity)
+	{
+		Item nextItem = new Item(name, price, quantity);
+		shoppingCart.add(nextItem);
+		
+	}
+}

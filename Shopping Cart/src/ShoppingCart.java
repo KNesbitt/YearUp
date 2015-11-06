@@ -1,60 +1,51 @@
 import java.util.ArrayList;
-import java.util.Scanner; 
-public class ShoppingCart 
-{
-	public static  ArrayList <Item> shoppingCart = new ArrayList<Item>();
-	
-	public static void main(String[] args) 
-	{
+import java.util.Scanner;
+
+public class ShoppingCart {
+	public ArrayList<Item> shoppingCart = new ArrayList<Item>();
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
 		introduction();
-		shoppingCartWork();
-		readItems();
+		ShoppingCart cart = new ShoppingCart();
+		cart.shoppingCartWork();
 	}
-	
-	public static void introduction()
-	{
+
+	public static void introduction() {
 		// This method prints introduction message
 		System.out.println("********************************");
-		System.out.println();
+		System.out.println("*                              *");
 		System.out.println("*        Shopping Cart         *");
-		System.out.println();
+		System.out.println("*                              *");
 		System.out.println("********************************");
-		
+
 	}
-	
-	public static void shoppingCartWork()
-	{
+
+	public void shoppingCartWork() {
 		System.out.println("Do you want to input items? Type y/n");
 		Scanner sc = new Scanner(System.in);
 		String reply = sc.nextLine();
-		
-		if (reply.equalsIgnoreCase("y"))
-		{
-			
-		}
-		else
-		{
+
+		if (reply.equalsIgnoreCase("y")) {
+			ScanItems();
+		} else {
 			System.out.println("Goodbye!");
-		}		
+		}
+
 	}
-	
-	private static void readItems() 
-	{	
-		System.out.println("Enter next item name or 'quit' to stop:");
-		Scanner sc = null;
-		String itemName = sc.nextLine();
+
+	public void ScanItems() {
 		
-		while(!itemName.equalsIgnoreCase("quit"))
-		{			
-			System.out.println("Enter next item price:");
-			double itemPrice = sc.nextDouble();
-			sc.nextLine();
-			System.out.println("Enter next item quantity:");
-			int quantity = sc.nextInt();
-			sc.nextLine();
-			System.out.println("Enter next item name or 'quit' to stop:");
-			itemName = sc.nextLine();
-		}		
+		
+		System.out.println("Enter an item name: ");
+		String name = sc.nextLine();
+		System.out.println("Enter a price: ");
+		double price = sc.nextDouble();
+
+		Item nextItem = new Item(name, price);
+		shoppingCart.add(nextItem);
+
+		System.out.println("Are you done shopping Yes or No.");
+		String reply = sc.nextLine();
 	}
-	
 }

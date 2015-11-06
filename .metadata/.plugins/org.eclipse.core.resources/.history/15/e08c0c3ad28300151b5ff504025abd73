@@ -1,0 +1,7 @@
+
+public interface ItaxPayer 
+{
+	void PayTaxes(double income, double taxRate);
+	void FileTaxReturn();
+
+}
