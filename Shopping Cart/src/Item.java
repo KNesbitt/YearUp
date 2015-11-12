@@ -6,39 +6,41 @@ public class Item
 		double m_price = 0.0;
 		int m_quantity = 0;
 		// 
-	Item(String name, double price){
+	/*Item(String name, double price, int quantity)
+	{
 		m_name = name;
 		m_price= price;
-	}
+		
+	}*/
 		Item(String name, double price, int quantity)
 		{	
-			String m_name = name;
-			double m_price = price;
-			int m_quantity = quantity;
+			m_name = name;
+			m_price = price;
+			m_quantity = quantity;
 			//
 		}
 
-		public String getM_name() {
+		public String get_name() {
 			return m_name;
 		}
 
-		public void setM_name(String m_name) {
+		public void set_name(String m_name) {
 			this.m_name = m_name;
 		}
 
-		public double getM_price() {
+		public double get_price() {
 			return m_price;
 		}
 
-		public void setM_price(double m_price) {
+		public void set_price(double m_price) {
 			this.m_price = m_price;
 		}
 
-		public int getM_quantity() {
+		public int get_quantity() {
 			return m_quantity;
 		}
 
-		public void setM_quantity(int m_quantity) {
+		public void set_quantity(int m_quantity) {
 			this.m_quantity = m_quantity;
 		}
 	

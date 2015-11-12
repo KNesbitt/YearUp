@@ -26,26 +26,50 @@ public class ShoppingCart {
 		Scanner sc = new Scanner(System.in);
 		String reply = sc.nextLine();
 
-		if (reply.equalsIgnoreCase("y")) {
+		if (reply.equalsIgnoreCase("y")) 
+		{
 			ScanItems();
-		} else {
+		} 
+		else 
+		{
 			System.out.println("Goodbye!");
 		}
 
 	}
 
-	public void ScanItems() {
-		
-		
+	public void ScanItems() 
+	{
 		System.out.println("Enter an item name: ");
 		String name = sc.nextLine();
 		System.out.println("Enter a price: ");
 		double price = sc.nextDouble();
+		System.out.println("Enter quantity: " );
+		int quantity = sc.nextInt();
+		sc.nextLine();
 
-		Item nextItem = new Item(name, price);
+		Item nextItem = new Item(name, price, quantity);
 		shoppingCart.add(nextItem);
 
-		System.out.println("Are you done shopping Yes or No.");
+		System.out.println("Are you done shopping? Type y/n.");
 		String reply = sc.nextLine();
+		
+		if (reply.equalsIgnoreCase("n"))
+		{
+			ScanItems();
+		}
+		else
+		{
+			System.out.println("These are your items.");
+			ListItems();
+		}
+	}
+	
+	public void ListItems() 
+	{
+		for (int i = 0; i < shoppingCart.size(); i++)
+		{
+			Item currentItem = shoppingCart.get(i);
+			System.out.println("Item number " + (i+1) + " Name: " + currentItem.m_name + " Price: "+ currentItem.m_price + " Quantity: "+ currentItem.m_quantity);
+		}
 	}
 }
