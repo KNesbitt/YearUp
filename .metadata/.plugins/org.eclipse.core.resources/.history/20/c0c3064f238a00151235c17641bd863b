@@ -1,0 +1,23 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileIO 
+{
+
+	public static void main(String[] args) throws IOException  
+	{
+		System.out.println("Hello World");
+		{
+		FileReader fileReader = new FileReader("C:\\Users\\knesbitt\\Documents\\Programming\\Input_Output_Lab.txt");
+		String fileContents ="";
+		int i;
+		while((i = fileReader.read()) != -1)
+		{
+			char ch = (char)i;
+		}
+		fileReader .close();
+		}
+		
+	}
+}

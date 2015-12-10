@@ -5,7 +5,7 @@ public class ExceptionCentral
 	public static void main(String[] args) 
 	{
 		int[] numbers = {1,3,5,7};
-		//ArrayIndexOutOfBoundsException(numbers);
+		ArrayIndexOutOfBoundsException(numbers);
 		NullPointerException();
 		ArithmeticException();
 	}
@@ -29,7 +29,7 @@ public class ExceptionCentral
 		/* The Null Pointer Exception is in the ArrayIndexOutOfBoundsException */
 	}
 
-	/*public static void ArrayIndexOutOfBoundsException(int[] numbers)
+	public static void ArrayIndexOutOfBoundsException(int[] numbers)
 	{
 		int sum = 0;
 
@@ -45,5 +45,5 @@ public class ExceptionCentral
 		}
 
 		System.out.println("Sum is " + sum);
-	}*/
+	}
 }

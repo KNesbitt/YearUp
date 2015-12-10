@@ -1,0 +1,123 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.GridLayout;
+
+public class TicTac {
+
+	private JFrame frmTicTacToe;
+	private String m_previousPlay = null;
+	private JButton [][] m_allButtons = new JButton[3][3];
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					TicTac window = new TicTac();
+					window.frmTicTacToe.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public TicTac() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmTicTacToe = new JFrame();
+		frmTicTacToe.setTitle("Tic Tac Toe :)");
+		frmTicTacToe.setBounds(100, 100, 475, 475);
+		frmTicTacToe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmTicTacToe.getContentPane().setLayout(new GridLayout(0, 3, 0, 0));
+
+		JButton btnOne = new JButton("");
+		frmTicTacToe.getContentPane().add(btnOne);
+		m_allButtons[0][0] = btnOne;
+
+		JButton btnTwo = new JButton("");
+		frmTicTacToe.getContentPane().add(btnTwo);
+		m_allButtons[0][1] = btnOne;
+
+		JButton btnThree = new JButton("");
+		frmTicTacToe.getContentPane().add(btnThree);
+		m_allButtons[0][2] = btnOne;
+
+		JButton btnFour = new JButton("");
+		frmTicTacToe.getContentPane().add(btnFour);
+		m_allButtons[1][0] = btnOne;
+
+		JButton btnFive = new JButton("");
+		frmTicTacToe.getContentPane().add(btnFive);
+		m_allButtons[1][1] = btnOne;
+
+		JButton btnSix = new JButton("");
+		frmTicTacToe.getContentPane().add(btnSix);
+		m_allButtons[1][2] = btnOne;
+
+		JButton btnSeven = new JButton("");
+		frmTicTacToe.getContentPane().add(btnSeven);
+		m_allButtons[2][0] = btnOne;
+
+		JButton btnEight = new JButton("");
+		frmTicTacToe.getContentPane().add(btnEight);
+		m_allButtons[2][1] = btnOne;
+
+		JButton btnNine = new JButton("");
+		frmTicTacToe.getContentPane().add(btnNine);
+		m_allButtons[2][2] = btnOne;
+
+	}
+
+	private void ChangeButtonText(JButton button)
+	{
+		if (m_previousPlay !=null)
+		{
+			if (m_previousPlay.equals("X"))
+			{
+				button.setText("O");
+				m_previousPlay = "O";
+			}
+			else
+			{
+				button.setText("X");
+				m_previousPlay = "X";
+			}
+		}
+		
+		else
+		{
+			m_previousPlay = "X";
+			
+		}
+	}
+	
+	private void DisableAllButtons()
+	{
+		if (m_allButtons !=null)
+		{
+			for (int i = 0; i < 3; i++)
+			{
+				for (int j = 0; j < 3; j++)
+				{
+					m_allButtons[i][j].setEnabled(false);
+				}
+			}
+		}
+	}
+}
