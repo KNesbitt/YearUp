@@ -1,0 +1,49 @@
+
+public class Information 
+{
+	String m_employeeName = null;
+	double m_salary = 0.0;
+	double m_taxPercentage = 0.0;
+	double m_benefits = 0.0;
+	
+	Information(String Name, double salary, double taxPercentage, double benefits)
+	{
+		m_employeeName = Name;
+		m_salary = salary;
+		m_taxPercentage = taxPercentage;
+		m_benefits = benefits;
+	}
+
+	public String getM_employeeName() {
+		return m_employeeName;
+	}
+
+	public void setM_employeeName(String m_employeeName) {
+		this.m_employeeName = m_employeeName;
+	}
+
+	public double getM_salary() {
+		return m_salary;
+	}
+
+	public void setM_salary(double m_salary) {
+		this.m_salary = m_salary;
+	}
+
+	public double getM_taxPercentage() {
+		return m_taxPercentage;
+	}
+
+	public void setM_taxPercentage(double m_taxPercentage) {
+		this.m_taxPercentage = m_taxPercentage;
+	}
+
+	public double getM_benefits() {
+		return m_benefits;
+	}
+
+	public void setM_benefits(double m_benefits) {
+		this.m_benefits = m_benefits;
+	}
+	
+}

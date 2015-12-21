@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Payroll 
+{
+
+	public static ArrayList<Payroll> list = new ArrayList<Payroll>();
+	static Scanner sc = new Scanner(System.in);
+	private String m_employeeName;
+
+
+	public Payroll(String name, double salary, double taxPercentage, double benefits) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) 
+	{
+		PersonName();
+		CreatePayCheck();
+
+
+	}
+
+	private static void PersonName() 
+	{
+		System.out.println("What is the person's name?");
+		String Name = sc.nextLine();
+		System.out.println("What is the person's salary?");
+		double salary = sc.nextDouble();
+		System.out.println("What is the person's tax rate?");
+		double taxPercentage = sc.nextDouble();
+		sc.nextLine();
+		System.out.println("What is the person's benefits?");
+		double benefits = sc.nextDouble();
+		sc.nextDouble();
+
+		Payroll Person = new Payroll (Name, salary, taxPercentage, benefits);
+		list.add(Person);
+		
+		
+		System.out.println("Are you done inputing employees? y/n");
+		String reply = sc.nextLine();
+		
+		if (reply.equalsIgnoreCase("n"))
+		{
+			CreatePayCheck();
+		}
+		else
+		{
+			System.out.println("These are the employee payrolls.");
+		}
+	
+	}
+
+	static void CreatePayCheck()
+	{
+		for (int i = 0; i < list.size(); i++)
+		{
+			Payroll Person = list.get(i);
+			System.out.println("Name: " + Person.m_employeeName );
+		}
+	}
+
+}

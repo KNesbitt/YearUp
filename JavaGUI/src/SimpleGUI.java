@@ -1,26 +1,20 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import java.awt.FlowLayout;
 import javax.swing.JLabel;
+import java.awt.BorderLayout;
 import javax.swing.JTextField;
-import java.awt.Component;
-import javax.swing.Box;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.ChangeEvent;
 
 public class SimpleGUI {
 
 	private JFrame frame;
 	private JTextField textField;
-	private JLabel YearUpStudent;
-	private JTextField textField_2;
-	private JLabel Student;
-	private JButton btnWhoAreYou;
-	private JLabel WhoAreYouR;
+	private JLabel lblIAm;
+	private JTextField textField_1;
+	private JLabel lblNewLabel_1;
 
 	/**
 	 * Launch the application.
@@ -50,51 +44,41 @@ public class SimpleGUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 500, 300);
+		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel Name = new JLabel("My name is :");
-		Name.setBounds(91, 56, 99, 14);
-		frame.getContentPane().add(Name);
+		JLabel lblNewLabel = new JLabel("My Name is: ");
+		lblNewLabel.setBounds(101, 44, 89, 23);
+		frame.getContentPane().add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setBounds(259, 53, 178, 20);
+		textField.setBounds(200, 45, 143, 20);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		YearUpStudent = new JLabel("I am :");
-		YearUpStudent.setBounds(91, 116, 57, 14);
-		frame.getContentPane().add(YearUpStudent);
+		lblIAm = new JLabel("I Am: ");
+		lblIAm.setBounds(101, 78, 46, 14);
+		frame.getContentPane().add(lblIAm);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(259, 113, 178, 20);
-		frame.getContentPane().add(textField_2);
-		textField_2.setColumns(10);
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(200, 76, 143, 20);
+		frame.getContentPane().add(textField_1);
 		
-		Student = new JLabel("I am a student of Year Up");
-		Student.setBounds(176, 161, 150, 14);
-		frame.getContentPane().add(Student);
+		lblNewLabel_1 = new JLabel("I Am A Year Up Student !!!");
+		lblNewLabel_1.setBounds(149, 124, 143, 14);
+		frame.getContentPane().add(lblNewLabel_1);
 		
-		btnWhoAreYou = new JButton("Who are you?");
-		btnWhoAreYou.addChangeListener(new ChangeListener() {
-			public void stateChanged(ChangeEvent arg0) { 
+		JButton btnNewButton = new JButton("Who Are You?");
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				System.out.println(textField + textField_1 );
 			}
-			});
-		btnWhoAreYou.setBounds(183, 204, 118, 23);
-		btnWhoAreYou.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				textField.setText("Kinsler Nesbitt");
-				textField_2.setText("19");}
 		});
-		frame.getContentPane().add(btnWhoAreYou);
-		
-		WhoAreYouR = new JLabel("");
-		WhoAreYouR.setBounds(238, 41, 0, 0);
-		frame.getContentPane().add(WhoAreYouR);
-		
-		JLabel lblSimpleJavaGui = new JLabel("Simple Java GUI");
-		lblSimpleJavaGui.setBounds(192, 11, 99, 14);
-		frame.getContentPane().add(lblSimpleJavaGui);
+		btnNewButton.setBounds(155, 167, 123, 23);
+		frame.getContentPane().add(btnNewButton);
 	}
 }

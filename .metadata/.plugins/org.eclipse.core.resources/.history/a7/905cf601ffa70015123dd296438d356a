@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Payroll 
+{
+
+	public static ArrayList<Information> list = new ArrayList<Information>();
+	static Scanner sc = new Scanner(System.in);
+
+
+	public static void main(String[] args) 
+	{
+		PersonName();
+		CreatePayCheck();
+
+
+	}
+
+	private static void PersonName() 
+	{
+		System.out.println("What is the person's name?");
+		String Name = sc.nextLine();
+		System.out.println("What is the person's salary?");
+		double salary = sc.nextDouble();
+		System.out.println("What is the person's tax rate?");
+		double taxPercentage = sc.nextDouble();
+		sc.nextLine();
+		System.out.println("What is the person's benefits?");
+		double benefits = sc.nextDouble();
+		sc.nextDouble();
+
+		Information Person = new Information (Name, salary, taxPercentage, benefits);
+		list.add(Person);
+		
+		System.out.println("Are you done inputing employees? y/n");
+		String reply = sc.nextLine();
+		
+		if (reply.equalsIgnoreCase("n"))
+		{
+			CreatePayCheck();
+		}
+		else
+		{
+			System.out.println("These are the employee payrolls.");
+		}
+	
+	}
+
+	static void CreatePayCheck()
+	{
+
+		double salary = 0.0;
+		double taxPercentage = 0.0;
+		double benefits = 0.0;
+		
+		double payCheck = salary - (salary * taxPercentage + benefits);
+
+		return;
+	}
+
+}

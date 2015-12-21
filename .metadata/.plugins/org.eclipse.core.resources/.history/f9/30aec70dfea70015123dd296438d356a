@@ -1,0 +1,6 @@
+
+public interface Person 
+{
+	void payCheck(double payCheck);
+	void CreatePayCheck();
+}
