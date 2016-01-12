@@ -1,0 +1,30 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ConcatenateTest {
+
+	@Test
+	public void testConcatenateTwo() 
+	{
+		Concatenate concat = new Concatenate();
+		
+		String resultOne = concat.ConcatenateTwo("Kinsler ", "Nesbitt");
+		assertEquals(resultOne, "Kinsler Nesbitt");
+		
+		String resultTwo = concat.ConcatenateTwo("", "");
+		assertEquals(resultTwo, "");
+	}
+
+	@Test
+	public void testConcatenateThree()
+	{
+		Concatenate concat = new Concatenate();
+		
+		String resultOne = concat.ConcatenateThree("The ", "cat's ", "back");
+		assertEquals(resultOne, "The cat's back");
+		
+		String resultTwo = concat.ConcatenateThree("Ha", "Ha", "Ha");
+		assertEquals(resultTwo, "HaHaHa");
+	}
+}

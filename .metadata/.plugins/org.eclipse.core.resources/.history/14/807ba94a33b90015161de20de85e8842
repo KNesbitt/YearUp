@@ -1,0 +1,15 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class StregthLengthTest 
+{
+	@Test
+	public void testLengthOfString() 
+	{
+		Concatenate concat = new Concatenate();
+		
+		int resultOne = concat.StregthLength("Kinsler");
+		assertEquals(resultOne, "7");
+	}
+}
